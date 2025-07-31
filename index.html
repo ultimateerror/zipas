@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>zipas</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-CssEHpZT.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32-DT8UnViW.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16-B5fPB3BL.png" />
+		<link rel="manifest" href="/assets/site-BU1BJQIW.webmanifest" />
+		<script type="module" crossorigin src="/assets/index-B91T0xYF.js"></script>
+		<link rel="stylesheet" crossorigin href="/assets/index-45k-QA7T.css">
+	<meta name="version" content="1.1.1">
+					<meta name="build-date" content="2025-07-31T09:31:12.610Z">
+					<link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+	<body>
+		<header>
+			<img src="/assets/logo-CCPKkEDg.svg" aria-hidden="true" />
+			<span class="sr-only">zipas (zip picture auto saver)</span>
+		</header>
+
+		<div id="top">
+			<span id="filename"></span>
+			<button id="unloadzip">🧹 Unload ZIP file</button>
+		</div>
+
+		<main>
+			<div id="welcome" for="load-zip-button">
+				<p>
+					Meet <strong>zipas</strong> – your chill way to grab images from zip files, right in your browser. No uploads, no stress, works offline too! 😎
+				</p>
+
+				<p>
+					<small
+						>Say hello to seamless zip exploration, directly on your device,
+						without the need for installations or additional tools. Take control
+						of your file management experience with
+						<em class="title">zipas</em> - fast ⚡, secure 🔒, and hassle-free 🛀. You do
+						not need to upload your file to some unknown server.
+						<strong>The file will never leave you computer.</strong>
+					</small>
+				</p>
+
+				<button id="loadzip">📂 Pick a ZIP file</button>
+
+				<div id="message-unsupportedbrowser" hidden>
+					<p>
+						⚠️ Oops! Looks like your browser can't run this app. Want more info? Check these out:
+					</p>
+
+					<ul>
+						<li>
+							<code>showOpenFilePicker</code> (<a
+								href="https://caniuse.com/?search=showOpenFilePicker"
+								>caniuse</a
+							>,
+							<a
+								href="https://developer.mozilla.org/en-US/docs/Web/API/Window/showOpenFilePicker"
+								>mdn</a
+							>)
+						</li>
+						<li>
+							<code>showSaveFilePicker</code> (<a
+								href="https://caniuse.com/?search=showSaveFilePicker"
+								>caniuse</a
+							>,
+							<a
+								href="https://developer.mozilla.org/en-US/docs/Web/API/Window/showSaveFilePicker"
+								>mdn</a
+							>)
+						</li>
+					</ul>
+				</div>
+			</div>
+
+				<div id="message-zipcorruption" hidden>
+					<p>
+						⚠️ Uh-oh! That zip file looks broken. Sorry about that! Maybe try your system's unzipper or a tool like 7zip. 🛠️
+					</p>
+
+					<ul>
+						<li>
+							<code>showOpenFilePicker</code> (<a
+								href="https://caniuse.com/?search=showOpenFilePicker"
+								>caniuse</a
+							>,
+							<a
+								href="https://developer.mozilla.org/en-US/docs/Web/API/Window/showOpenFilePicker"
+								>mdn</a
+							>)
+						</li>
+						<li>
+							<code>showSaveFilePicker</code> (<a
+								href="https://caniuse.com/?search=showSaveFilePicker"
+								>caniuse</a
+							>,
+							<a
+								href="https://developer.mozilla.org/en-US/docs/Web/API/Window/showSaveFilePicker"
+								>mdn</a
+							>)
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<button id="saveall">
+				<span>🖼️ Save all images</span>
+				<small>
+					"Downloads" every image for you, one by one – just sit back, it might take a sec! ⏳
+				</small>
+			</button>
+
+			<div id="entries"></div>
+		</main>
+
+	</body>
+</html>
