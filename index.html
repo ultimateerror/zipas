@@ -3,20 +3,25 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Meet zipas – your chill way to grab images from zip files, right in your browser. No uploads, no stress, works offline too! 😎"
+		/>
 		<title>zipas</title>
 		<link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon-CssEHpZT.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32-DT8UnViW.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16-B5fPB3BL.png" />
 		<link rel="manifest" href="./assets/site-BU1BJQIW.webmanifest" />
-		<script type="module" crossorigin src="./assets/index-B91T0xYF.js"></script>
-		<link rel="stylesheet" crossorigin href="./assets/index-45k-QA7T.css">
-	<meta name="version" content="1.1.1">
-					<meta name="build-date" content="2025-07-31T09:56:17.217Z">
+		<script type="module" crossorigin src="./assets/index-DF1D9vtR.js"></script>
+		<link rel="stylesheet" crossorigin href="./assets/index-CAu2oI2X.css">
+	<meta name="version" content="1.1.2">
+					<meta name="build-date" content="2025-08-01T07:26:37.386Z">
 					<link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
 	<body>
 		<header>
-			<img src="./assets/logo-CCPKkEDg.svg" aria-hidden="true" />
-			<span class="sr-only">zipas (zip picture auto saver)</span>
+			<h1>
+				<img src="./assets/logo-CCPKkEDg.svg" alt="zipas logo" width="400" height="136" />
+			</h1>
 		</header>
 
 		<div id="top">
@@ -27,7 +32,9 @@
 		<main>
 			<div id="welcome" for="load-zip-button">
 				<p>
-					Meet <strong>zipas</strong> – your chill way to grab images from zip files, right in your browser. No uploads, no stress, works offline too! 😎
+					Meet <strong>zipas</strong> – your chill way to grab images from zip
+					files, right in your browser. No uploads, no stress, works offline
+					too! 😎
 				</p>
 
 				<p>
@@ -35,17 +42,18 @@
 						>Say hello to seamless zip exploration, directly on your device,
 						without the need for installations or additional tools. Take control
 						of your file management experience with
-						<em class="title">zipas</em> - fast ⚡, secure 🔒, and hassle-free 🛀. You do
-						not need to upload your file to some unknown server.
+						<em class="title">zipas</em> - fast ⚡, secure 🔒, and hassle-free
+						🛀. You do not need to upload your file to some unknown server.
 						<strong>The file will never leave you computer.</strong>
 					</small>
 				</p>
 
 				<button id="loadzip">📂 Pick a ZIP file</button>
 
-				<div id="message-unsupportedbrowser" hidden>
+				<div id="message-unsupportedbrowser" hidden aria-live="polite">
 					<p>
-						⚠️ Oops! Looks like your browser can't run this app. Want more info? Check these out:
+						⚠️ Oops! Looks like your browser can't run this app. Want more info?
+						Check these out:
 					</p>
 
 					<ul>
@@ -71,11 +79,11 @@
 						</li>
 					</ul>
 				</div>
-			</div>
 
-				<div id="message-zipcorruption" hidden>
+				<div id="message-zipcorruption" hidden aria-live="assertive">
 					<p>
-						⚠️ Uh-oh! That zip file looks broken. Sorry about that! Maybe try your system's unzipper or a tool like 7zip. 🛠️
+						⚠️ Uh-oh! That zip file looks broken. Sorry about that! Maybe try
+						your system's unzipper or a tool like 7zip. 🛠️
 					</p>
 
 					<ul>
@@ -106,11 +114,12 @@
 			<button id="saveall">
 				<span>🖼️ Save all images</span>
 				<small>
-					"Downloads" every image for you, one by one – just sit back, it might take a sec! ⏳
+					"Downloads" every image for you, one by one – just sit back, it might
+					take a sec! ⏳
 				</small>
 			</button>
 
-			<div id="entries"></div>
+			<div id="entries" aria-live="polite"></div>
 		</main>
 
 	</body>
