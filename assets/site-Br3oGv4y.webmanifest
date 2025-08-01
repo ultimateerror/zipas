@@ -1,5 +1,5 @@
 {
-  "name": "Zip Picture Auto Saver",
+  "name": "zipas",
   "short_name": "zipas",
   "icons": [
     {
@@ -25,6 +25,6 @@
   "background_color": "#0a1129",
   "display": "standalone",
   "lang": "en-US",
-  "start_url": "https://wrnr-zipas.netlify.app/",
+  "start_url": "https://ultimateerror.github.io/zipas",
   "categories": [ "productivity", "utilities" ]
 }
