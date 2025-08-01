@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Meet zipas – your chill way to grab images from zip files, right in your browser. No uploads, no stress, works offline too! 😎"
+		/>
 		<title>zipas</title>
 		<link rel="stylesheet" href="main.css" />
 		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -12,8 +16,9 @@
 	</head>
 	<body>
 		<header>
-			<img src="logo.svg" aria-hidden="true" />
-			<span class="sr-only">zipas (zip picture auto saver)</span>
+			<h1>
+				<img src="logo.svg" alt="zipas logo" width="400" height="136" />
+			</h1>
 		</header>
 
 		<div id="top">
@@ -24,7 +29,9 @@
 		<main>
 			<div id="welcome" for="load-zip-button">
 				<p>
-					Meet <strong>zipas</strong> – your chill way to grab images from zip files, right in your browser. No uploads, no stress, works offline too! 😎
+					Meet <strong>zipas</strong> – your chill way to grab images from zip
+					files, right in your browser. No uploads, no stress, works offline
+					too! 😎
 				</p>
 
 				<p>
@@ -32,17 +39,18 @@
 						>Say hello to seamless zip exploration, directly on your device,
 						without the need for installations or additional tools. Take control
 						of your file management experience with
-						<em class="title">zipas</em> - fast ⚡, secure 🔒, and hassle-free 🛀. You do
-						not need to upload your file to some unknown server.
+						<em class="title">zipas</em> - fast ⚡, secure 🔒, and hassle-free
+						🛀. You do not need to upload your file to some unknown server.
 						<strong>The file will never leave you computer.</strong>
 					</small>
 				</p>
 
 				<button id="loadzip">📂 Pick a ZIP file</button>
 
-				<div id="message-unsupportedbrowser" hidden>
+				<div id="message-unsupportedbrowser" hidden aria-live="polite">
 					<p>
-						⚠️ Oops! Looks like your browser can't run this app. Want more info? Check these out:
+						⚠️ Oops! Looks like your browser can't run this app. Want more info?
+						Check these out:
 					</p>
 
 					<ul>
@@ -68,11 +76,11 @@
 						</li>
 					</ul>
 				</div>
-			</div>
 
-				<div id="message-zipcorruption" hidden>
+				<div id="message-zipcorruption" hidden aria-live="assertive">
 					<p>
-						⚠️ Uh-oh! That zip file looks broken. Sorry about that! Maybe try your system's unzipper or a tool like 7zip. 🛠️
+						⚠️ Uh-oh! That zip file looks broken. Sorry about that! Maybe try
+						your system's unzipper or a tool like 7zip. 🛠️
 					</p>
 
 					<ul>
@@ -103,11 +111,12 @@
 			<button id="saveall">
 				<span>🖼️ Save all images</span>
 				<small>
-					"Downloads" every image for you, one by one – just sit back, it might take a sec! ⏳
+					"Downloads" every image for you, one by one – just sit back, it might
+					take a sec! ⏳
 				</small>
 			</button>
 
-			<div id="entries"></div>
+			<div id="entries" aria-live="polite"></div>
 		</main>
 
 		<script type="module" src="./src/main.ts"></script>
